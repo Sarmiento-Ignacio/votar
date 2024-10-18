@@ -84,7 +84,7 @@ fun solicitarSiNo(pregunta: String): Boolean {
 fun puedeVotar(nombre: String, edad: Int, antecendentes: Boolean, chileno: Boolean){
       when {
         antecendentes -> println("Hola, $nombre,Usted no  puede votar porque posee antecedentes criminales.")
-        chileno -> println("Hola, $nombre,Usted no es Chileno para votar.")
+        !chileno -> println("Hola, $nombre,Usted no es Chileno para votar.")
         else -> println("Hola, $nombre, Usted cumple con todos los requisitos para sufragar.")
     }
 }
